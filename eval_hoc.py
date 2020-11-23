@@ -77,8 +77,8 @@ def eval_hoc(true_file, pred_file):
             for l in true_row['labels'].split(','):
                 data[key][0].add(LABELS.index(l))
 
-        if not pd.isna(pred_row['labels']):
-            for l in pred_row['labels'].split(','):
+        if not pd.isna(pred_row['prediction']):
+            for l in pred_row['prediction'].split(','):
                 data[key][1].add(LABELS.index(l))
 
     assert len(data) == 315, 'There are 315 documents in the test set: %d' % len(data)
