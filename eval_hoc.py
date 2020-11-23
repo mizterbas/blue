@@ -4,10 +4,10 @@ import numpy as np
 
 from pmetrics import divide
 
-LABELS = ['activating invasion and metastasis', 'avoiding immune destruction',
-          'cellular energetics', 'enabling replicative immortality', 'evading growth suppressors',
-          'genomic instability and mutation', 'inducing angiogenesis', 'resisting cell death',
-          'sustaining proliferative signaling', 'tumor promoting inflammation']
+LABELS = ['0_0', '1_0',
+          '2_0', '3_0', '4_0',
+          '5_0', '6_0', '7_0',
+          '8_0', '9_0','4_1','8_1','7_1','9_1','3_1','5_1','0_1','2_1','1_1','6_1']
 
 
 def get_p_r_f_arrary(test_predict_label, test_true_label):
@@ -102,8 +102,8 @@ def eval_hoc(true_file, pred_file):
 
     r, p, f1 = get_p_r_f_arrary(y_pred, y_test)
     print('Precision: {:.1f}'.format(p*100))
-    print('Recall   : {:.1f}'.format(r*100))
-    print('F1       : {:.1f}'.format(f1*100))
+    print('F1       : {:.1f}'.format(r*100))
+    print('Recall   : {:.1f}'.format(f1*100))
 
 
 if __name__ == '__main__':
